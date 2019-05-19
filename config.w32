@@ -1,0 +1,7 @@
+ARG_ENABLE('my', 'my support', 'no');
+
+if (PHP_MY != 'no') {
+	AC_DEFINE('HAVE_MY', 1, 'my support enabled');
+
+	EXTENSION('my', 'my.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
